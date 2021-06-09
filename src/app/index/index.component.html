@@ -1,0 +1,20 @@
+<div class="mt-10">
+    <input name="input" id="input" type="text" #input>
+<button (click)="clickname(input.value)">name</button>
+<button (click)="clickCity(input.value)">city</button>
+</div>
+<br>
+ <table class="table table-hover ">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>user City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of apiData">
+                     <td >{{item.name}}</td>
+                     <td>{{item.city}}</td> 
+                </tr>
+            </tbody>         
+</table> 
